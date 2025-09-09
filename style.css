@@ -1,0 +1,135 @@
+/* إعدادات أساسية */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 18px;
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #A50044 0%, #004D98 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* الهيدر */
+header {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header nav {
+  margin-top: 10px;
+}
+
+header nav a {
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: yellow;
+}
+
+/* الألوان */
+.blue-color {
+  color: #004D98;
+}
+
+.red-color {
+  color: #A50044;
+}
+
+/* قسم الترحيب */
+.welcome {
+  text-align: center;
+  margin: 40px 20px;
+}
+
+.welcome h2 {
+  font-size: 2rem;
+}
+
+.btns {
+  margin-top: 20px;
+}
+
+.my-btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  font-size: clamp(14px, 2.5vw, 18px);
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #d94848, #3b6bbf);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.my-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #e74c3c, #3498db);
+}
+
+/* الروابط */
+.groups, .admins {
+  margin: 30px;
+}
+
+.groups h3, .admins h3 {
+  color: yellow;
+  margin-bottom: 10px;
+}
+
+.groups ul, .admins ul {
+  list-style: none;
+  padding: 0;
+}
+
+.groups li, .admins li {
+  margin: 10px 0;
+}
+
+.whatsApp {
+  color: #34d87a;
+}
+
+.tele {
+  color: #06b6d4;
+}
+
+.you {
+  color: red;
+}
+
+.karam, .Amir {
+  color: blue;
+}
+
+.abd, .Riad {
+  color: red;
+}
+
+/* الفوتر */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+footer a.problem-link {
+  color: red;
+  font-weight: bold;
+}

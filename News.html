@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>BLAUGRANA NEWS</title>
+  <meta name="keywords" content="Barcelona, messi, yamal, raphinia, pedri">
+  <meta name="author" content="ABD ALKAREEM & Amir Arafeh Alsayed">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* ---------- Reset / base ---------- */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(180deg, #0b1220 0%, #071029 100%);
+      color: #f3f6fb;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 24px;
+    }
+
+    /* ---------- Container ---------- */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+      border: 1px solid rgba(255,255,255,0.03);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    header h1 {
+      font-size: 1.7rem;
+      margin: 0;
+      letter-spacing: 0.6px;
+      color: #ffd166;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .back-link {
+      text-decoration: none;
+      color: #0b1220;
+      background: #ffd166;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .back-link:hover { transform: translateY(-3px); box-shadow: 0 8px 18px rgba(0,0,0,0.35); }
+
+    hr.sep {
+      border: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+      margin: 18px 0;
+    }
+
+    /* ---------- Mark + small text ---------- */
+    mark {
+      background: #ff7b7b55;
+      color: #ffdede;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .intro {
+      margin: 10px 0 18px;
+      color: #dbe9ff;
+      font-size: 0.97rem;
+    }
+
+    /* ---------- Grid of articles ---------- */
+    .news-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+    @media (min-width: 820px) {
+      .news-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1100px) {
+      .news-grid { grid-template-columns: 1fr 1fr 1fr; }
+    }
+
+    article.card {
+      background: rgba(255,255,255,0.02);
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.03);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card figure {
+      margin: 0;
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/10;
+      overflow: hidden;
+    }
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .4s ease;
+    }
+    .card:hover img { transform: scale(1.03); }
+
+    .card .content {
+      padding: 12px 14px;
+    }
+    .card h2, .card h3 {
+      margin: 0 0 8px 0;
+      font-size: 1.05rem;
+      color: #eaf6ff;
+    }
+    .card p {
+      margin: 0;
+      color: #cfe8ff;
+      font-size: 0.95rem;
+    }
+
+    .badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0,0,0,0.45);
+      color: #fff;
+      padding: 6px 9px;
+      border-radius: 8px;
+      font-weight: 700;
+      backdrop-filter: blur(4px);
+    }
+
+    /* large single column for featured */
+    .featured {
+      grid-column: 1 / -1;
+      display: block;
+    }
+
+    /* small utility */
+    .meta {
+      margin-top: 8px;
+      font-size: 0.85rem;
+      color: #98c0ff;
+    }
+
+    footer {
+      margin-top: 18px;
+      text-align: center;
+      color: #9fbaf7;
+      font-size: 0.9rem;
+    }
+
+    /* pre styling (if you still want preformatted blocks) */
+    pre {
+      white-space: pre-wrap;
+      margin: 0;
+      padding: 0;
+      font-family: inherit;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Blaugrana News · Fans</h1>
+      <a class="back-link" href="index.html"> العودة للصفحة الرئيسية < </a>
+    </header>
+
+    <hr class="sep">
+
+    <p class="intro"><mark>هنا</mark> أفضل مكان لعشّاق <i>برشلونة</i> — تابع الأخبار، التحليلات، والتحديثات الرسمية.</p>
+
+    <hr class="sep">
+
+    <section class="news-grid">
+      <!-- Featured / big -->
+      <article class="card featured">
+        <figure>
+         <img src="files/new.jpg" alt="رغبة بعقد جديد مع برشلونة">
+          <div class="badge">أخبار عاجلة</div>
+        </figure>
+        <div class="content">
+          <h2>🌐📲 - #مــوقــع » FICHAJES</h2>
+          <pre>
+💣 • ألفاريز أبلغ المقربين منه برغبته
+في التوقيع مع نادي برشلونة في صيف 2026
+          </pre>
+          <p class="meta">تحديث: قد تتغير الأوضاع حسب الساعات والأيام القادمة.</p>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article class="card">
+        <figure>
+          <img src="files/hhh.jpg" alt="إصابات برشلونة">
+        </figure>
+        <div class="content">
+          <h3>الإصابات تعصف ببرشلونة مع بداية الموسم</h3>
+          <pre>
+▪️ غافي ⚠️
+▪️ فرينكي ⚠️
+▪️ بالدي ⚠️
+
+• بقاء لاعبين دوليين آخرين سيخوضون تصفيات كأس العالم أيام: الإثنين، الثلاثاء، الأربعاء
+          </pre>
+          <p class="meta">تابع الأخبار الرسمية للنادي للتأكيد.</p>
+        </div>
+      </article>
+
+      <!-- Article 3 -->
+      <article class="card">
+        <figure>
+          <img src="files/un.jpg" alt="من تصريحات مانوولو">
+        </figure>
+        <div class="content">
+          <h3>🤵🏻🎙️ #مـانـولـو_لامـا</h3>
+          <pre>• 💬 بيدري الآن بمستوى تشافي وإنييستا ⭐️.</pre>
+          <p class="meta">تصريحات صحفية وتحليل فني.</p>
+        </div>
+      </article>
+
+      <!-- Article 4 -->
+      <article class="card">
+        <figure>
+          <img src="files/hh.jpg" alt="خبر عن خافي ميغيل">
+        </figure>
+        <div class="content">
+          <h3>🧑🏻‍💼🎙 #خـافـي_مـيـغـيـل</h3>
+          <pre>💬 • اذا قرر غافي الخضوع لعملية جراحية سيغيب لمدة شهر كامل.😬</pre>
+          <p class="meta">حالة طبية محتملة — المصدر: تصريحات مدرب/طبيب.</p>
+        </div>
+      </article>
+
+      <!-- Article 5 -->
+      <article class="card">
+        <figure>
+          <img src="files/pn.jpg" alt="أرقام اللاعبين 2025/2026">
+        
+        </figure>
+        <div class="content">
+          <h3>🚨⚠️ #رســمــيــا | #FCB</h3>
+          <pre>⬅️ أرقام اللاعبين الرسمية لموسم 2025/2026 ✅🔥.</pre>
+          <p class="meta">قائمة أرقام الموسم المنشورة رسميًا.</p>
+        </div>
+      </article>
+    </section>
+
+    <hr class="sep">
+
+    <footer>
+      تابعنا للمزيد من التحديثات • BlaUgrana News ©
+    </footer>
+  </div>
+</body>
+</html>
